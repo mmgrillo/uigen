@@ -27,7 +27,7 @@ npm run db:reset       # Reset database (destructive)
 npx prisma studio      # Browse database GUI
 ```
 
-Dev server requires `NODE_OPTIONS='--require ./node-compat.cjs'` (already in npm scripts).
+Dev server requires `NODE_OPTIONS=--require ./node-compat.cjs` — the npm scripts set this via `cross-env` so they work on Linux, macOS, and Windows (cmd / Git Bash) without shell-specific syntax.
 
 Set `ANTHROPIC_API_KEY` in `.env` — without it the app falls back to a mock AI that generates simple placeholder components.
 
